@@ -2,6 +2,7 @@
 
 import styles from "@/app/login/page.module.css"
 import { createClient } from "@/lib/supabase/client";
+import { CornerDownRight } from "lucide-react";
 
 export default function LoginPage() {
     const supabase = createClient();
@@ -20,14 +21,13 @@ export default function LoginPage() {
     }
 
     return (
-        <main>
-            <div className={styles.container}>
-                <h1>raifi.archive</h1>
-
-                <button type="button" onClick={signInWithGoogle}>
-                    Continue with Google
+        <main className={styles.main}>
+            <section className={styles.container}>
+                <h1 className={styles.title}>Raifi.archive</h1>
+                <button className={styles.button} type="button" onClick={signInWithGoogle}>
+                    <CornerDownRight size={22} strokeWidth={2.25}/> Continue with Google
                 </button>
-            </div>
+            </section>
         </main>
     );
 }

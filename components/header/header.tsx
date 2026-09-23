@@ -47,8 +47,12 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.topRow}>
-                <div>
-
+                <div className={styles.button}>
+                    <div className={styles.circles}>
+                        <div className={styles.circle}></div>
+                        <div className={styles.circle}></div>
+                        <div className={styles.circle}></div>
+                    </div>
                     <button
                         className={styles.navButton}
                         onClick={toggleMenu}
@@ -58,12 +62,10 @@ export default function Header() {
                         <span className={styles.currentPage}>{currentPage.label}</span>
                     </button>
                 </div>
-
                 <Link href="/" className={styles.title}>
                     <p>Raifi.archive</p>
                 </Link>
             </div>
-
             {expanded && (
                 <div className={styles.expandedMenu}>
                     {otherPages.map((page) => {

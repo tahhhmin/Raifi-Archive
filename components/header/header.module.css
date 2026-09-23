@@ -5,9 +5,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: var(--background);
 }
-
 .topRow {
     margin: 1rem 2rem 0 2rem;
     display: flex;
@@ -15,8 +13,27 @@
     align-items: center;
     padding: 0.75rem 1.5rem;
     border: var(--border);
-}
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 
+}
+.button {
+    display: flex;
+        align-items: center;
+        gap: 0.5rem;
+}
+.circles {
+    display: flex;
+        align-items: center;
+        gap: 0.25rem;
+}
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2.5px solid #1a1a1a;
+    background: transparent;
+       box-shadow: 2px 2px 0px #1a1a1a;
+}
 .navButton {
     padding: 0;
     background: none;
@@ -24,8 +41,13 @@
     border: none;
     color: var(--foreground);
 }
-
+.currentPage {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+}
 .title {
+    font-size: 18px;
     text-decoration: none;
     color: var(--primary);
 }
