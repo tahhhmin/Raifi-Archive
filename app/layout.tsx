@@ -16,6 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html lang="en" className={`${lora.variable} ${geistMono.variable} h-full antialiased`}>
             <body>
+                <HeaderLayout/>
                 {children}
             </body>
         </html>
