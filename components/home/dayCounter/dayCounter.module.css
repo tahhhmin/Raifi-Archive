@@ -1,0 +1,24 @@
+.counterContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    border: var(--border);
+    padding: 0.5rem 1rem;
+    border-top: none;
+}
+@media (max-width: 768px) {
+    .counterContainer {
+        flex-direction: column;
+    }
+}
+.counter {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.35rem;
+}
+.time {
+    margin: auto 0;
+}
+.days {
+    font-weight: 600;
+}
