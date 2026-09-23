@@ -48,9 +48,7 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.topRow}>
                 <div>
-                    <div className={styles.circles}>
-                        
-                    </div>
+
                     <button
                         className={styles.navButton}
                         onClick={toggleMenu}

@@ -5,12 +5,9 @@ import MoodCheck from "@/components/home/moodCheck/MoodCheck";
 
 export default function Home() {
     return (
-        <main className={styles.main}>
+        <main>
             <DayCounter/>
             <MoodCheck/>
-            <div className={styles.smth}>
-                <p>something</p>
-            </div>
         </main>
     );
 }

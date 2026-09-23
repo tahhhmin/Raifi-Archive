@@ -1,29 +1,28 @@
 .header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    border: var(--border);
-    border-radius: 15px 15px 0 0;
-    margin: 1rem;
-    margin-bottom: 0;
+    background-color: var(--background);
 }
 
 .topRow {
+    margin: 1rem 2rem 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1.5rem;
+    border: var(--border);
 }
 
 .navButton {
-    background: none;
     padding: 0;
+    background: none;
     cursor: pointer;
     border: none;
-    font-family: var(--font-sans);
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--primary);
-
+    color: var(--foreground);
 }
 
 .title {
@@ -32,8 +31,10 @@
 }
 
 .expandedMenu {
+    margin: 0 2rem 0 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: var(--background);
 }
 
 .menuButton {
@@ -42,24 +43,23 @@
     align-items: center;
 
     background: none;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.5rem;
     text-align: left;
     cursor: pointer;
 
     font-family: var(--font-sans);
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--primary);
 
-    border-top: var(--border);
-    border-right: var(--border);
-    border-left: none;
-    border-bottom: none;
-}
-
-.menuButton:nth-child(3n) {
+    border: var(--border);
+    border-top: none;
     border-right: none;
 }
+.menuButton:nth-child(3n) {
+    border-right: var(--border);
+}
+
 
 @media (max-width: 768px) {
     .expandedMenu {
@@ -76,6 +76,3 @@
 }
 
 
-.currentPage {
-    font-weight: 800;
-}
