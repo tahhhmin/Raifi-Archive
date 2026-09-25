@@ -7,9 +7,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { 
     Home, CalendarDays, Clapperboard, Music, ListChecks, Mailbox,
     Heart, Camera, Gamepad2, Flower, BookUser, LoaderPinwheel, MessageCircleHeart,
+    Menu
 } from "lucide-react";
 
 import styles from "@/components/header/header.module.css";
+import ThemeToggle from "@/components/buttons/ThemeToggle";
 
 export default function Header() {
     const [expanded, setExpanded] = useState(false);
@@ -47,19 +49,21 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.headerContainer}>
-              
                 <button
                     className={styles.navButton}
                     onClick={toggleMenu}
                     aria-expanded={expanded}
                     aria-label="Open navigation menu"
                 >
-                    <span className={styles.currentPage}>{currentPage.label}</span>
+                    <span className={styles.currentPage}><Menu />{currentPage.label}</span>
                 </button>
-            
-                <Link href="/" className={styles.title}>
-                    <p>.archive</p>
-                </Link>
+                <div className={styles.buttonContainer}>
+                    <ThemeToggle/>
+                    <Link href="/" className={styles.title}>
+                        <p>Raifi.archive</p>
+                    </Link>
+                </div>
+
             </div>
             {expanded && (
                 <div className={styles.expandedMenu}>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Inter } from "next/font/google";
 import "@/app/globals.css";
 
+import ThemeProvider from "@/components/ThemeProvider";
 import HeaderLayout from "@/components/header/headerLayout";
 
 const lora = Lora({ subsets: ["latin"], variable: "--font-serif" });
@@ -14,10 +15,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
-        <html lang="en" className={`${lora.variable} ${inter.variable} h-full antialiased`}>
+        <html   lang="en" suppressHydrationWarning 
+                className={`${lora.variable} ${inter.variable} 
+                h-full antialiased`}
+        >
             <body>
-                <HeaderLayout/>
-                {children}
+                <ThemeProvider>
+                    <HeaderLayout/>
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

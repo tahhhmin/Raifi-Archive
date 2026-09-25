@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "./dayCounter.module.css";
+import styles from "./DayCounter.module.css";
 
 interface TimeTogether {
     days: number;
@@ -10,7 +10,7 @@ interface TimeTogether {
     seconds: number;
 }
 
-export default function dayCounter() {
+export default function DayCounter() {
     const [timeTogether, setTimeTogether] = useState<TimeTogether>({
         days: 0,
         hours: 0,

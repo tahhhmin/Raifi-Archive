@@ -1,5 +1,5 @@
 import styles from '@/app/(protected)/profile/page.module.css'
-import LogoutButton from '@/components/LogoutButton';
+import LogoutButton from '@/components/buttons/LogoutButton';
 
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
