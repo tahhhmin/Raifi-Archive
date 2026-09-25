@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import styles from '@/components/home/WeatherIndicator/WeatherIndicator.module.css'
+import styles from '@/components/home/weatherIndicator/WeatherIndicator.module.css'
 
 const LOCATIONS = [
     { name: 'Dhaka', latitude: 23.8103, longitude: 90.4125 },
