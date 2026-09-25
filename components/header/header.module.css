@@ -53,6 +53,11 @@
     padding: 0.5rem 1rem;
     background-color: var(--foreground);
 }
+.menuButton:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--foreground);
+}
 .menuButton:nth-child(4n) {
     border-right: var(--border);
 }

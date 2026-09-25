@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    background-color: var(--foreground);
+    border: var(--border);
+    border-top: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+}
