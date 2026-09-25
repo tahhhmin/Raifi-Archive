@@ -58,7 +58,7 @@ export default function Header() {
                 </button>
             
                 <Link href="/" className={styles.title}>
-                    <p>Raifi.archive</p>
+                    <p>.archive</p>
                 </Link>
             </div>
             {expanded && (
