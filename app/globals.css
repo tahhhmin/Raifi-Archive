@@ -33,10 +33,12 @@ body {
     font-weight: 500;
 }
 main {
+    justify-content: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     max-width: 1440px;
     width: 100%;
-    margin-top: 3.75rem;
+    margin: 3.75rem auto 0 auto;
     padding: 0 1rem;
 }
