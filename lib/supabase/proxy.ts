@@ -1,6 +1,6 @@
-//proxy.ts
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { isAllowedEmail } from "@/lib/auth/allowed-users";
 
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({
@@ -33,8 +33,36 @@ export async function updateSession(request: NextRequest) {
     }
   );
 
-  // Refresh and verify the Supabase Auth token.
-  await supabase.auth.getClaims();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  /*
+   * No authenticated user.
+   *
+   * We don't redirect here yet because this proxy
+   * currently handles the entire application.
+   */
+  if (!user) {
+    return response;
+  }
+
+  /*
+   * User is authenticated.
+   * Check whether their email is in the allowed list.
+   */
+  const allowed = isAllowedEmail(user.email);
+
+  console.log("Access check:", {
+    email: user.email,
+    allowed,
+  });
+
+  if (!allowed) {
+    return NextResponse.redirect(
+      new URL("/unauthorized", request.url)
+    );
+  }
 
   return response;
 }
