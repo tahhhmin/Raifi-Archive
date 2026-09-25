@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    background-color: var(--foreground);
+    border: var(--border);
+    border-top: none;
+    text-align: center;
+    justify-content: space-between;
+}
+.locationBlock {
+    padding: 0.5rem 1rem;
+    display: flex;
+    border-right: var(--border);
+    flex-direction: column;
+    width: 100%;
+}
+.locationBlock:last-child {
+    border-right: none;
+}
