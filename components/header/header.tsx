@@ -46,22 +46,17 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <div className={styles.topRow}>
-                <div className={styles.button}>
-                    <div className={styles.circles}>
-                        <div className={styles.circle}></div>
-                        <div className={styles.circle}></div>
-                        <div className={styles.circle}></div>
-                    </div>
-                    <button
-                        className={styles.navButton}
-                        onClick={toggleMenu}
-                        aria-expanded={expanded}
-                        aria-label="Open navigation menu"
-                    >
-                        <span className={styles.currentPage}>{currentPage.label}</span>
-                    </button>
-                </div>
+            <div className={styles.headerContainer}>
+              
+                <button
+                    className={styles.navButton}
+                    onClick={toggleMenu}
+                    aria-expanded={expanded}
+                    aria-label="Open navigation menu"
+                >
+                    <span className={styles.currentPage}>{currentPage.label}</span>
+                </button>
+            
                 <Link href="/" className={styles.title}>
                     <p>Raifi.archive</p>
                 </Link>
