@@ -1,0 +1,30 @@
+.main {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    width: 100%;
+}
+.container {
+    background-color: var(--foreground);
+    padding: 1rem;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+}
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.button {
+    background-color: var(--primary);
+    border-radius: 12px;
+    color: var(--foreground);
+    text-align: center;
+}
