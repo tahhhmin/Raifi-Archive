@@ -1,66 +1,13 @@
 .header {
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100vw;
-    z-index: 1000;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: aqua;
 }
 .headerContainer {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    padding: 0.5rem 1.5rem;
-    margin: 1rem 1rem 0 1rem;
-    box-shadow: 4px 4px 0px #030004;
-    color: var(--foreground);
-    background-color: #D0FA96;
-}
-.button {
-    display: flex;
-        align-items: center;
-        gap: 0.5rem;
-}
-
-.navButton {
-    padding: 0;
-    background: none;
-    cursor: pointer;
-    border: none;
-    color: var(--foreground);
-}
-
-
-
-.expandedMenu {
-    margin: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #D0FA96;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    box-shadow: 4px 4px 0 #030004;
-}
-
-.menuButton {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: none;
-    padding: 0.75rem 1.5rem;
-    text-align: left;
-    cursor: pointer;
-    font-family: var(--font);
-    color: var(--primary);
-}
-
-
-@media (max-width: 768px) {
-    .expandedMenu {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
