@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "./DayCounter.module.css";
+import styles from "@/components/home/dayCounter/DayCounter.module.css";
 
 interface TimeTogether {
     days: number;
