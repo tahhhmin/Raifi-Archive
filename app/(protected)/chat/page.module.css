@@ -147,38 +147,6 @@
 
 
 
-/* Mobile */
-
-@media (max-width: 600px) {
-  .page {
-    padding: 0;
-  }
-
-  .chatContainer {
-    height: 100vh;
-
-    border: none;
-    border-radius: 0;
-
-    box-shadow: none;
-  }
-
-  .header {
-    padding: 16px;
-  }
-
-  .messages {
-    padding: 20px 14px 24px;
-  }
-
-  .messageContent {
-    max-width: 82%;
-  }
-
-  .composer {
-    padding: 10px;
-  }
-}
 .messageAvatar {
   width: 32px;
   height: 32px;

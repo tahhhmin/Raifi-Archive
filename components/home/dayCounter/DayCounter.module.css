@@ -5,6 +5,7 @@
     border: var(--border);
     padding: 0.5rem 1rem;
     background-color: var(--foreground);
+    text-align: left;
 }
 @media (max-width: 768px) {
     .counterContainer {
