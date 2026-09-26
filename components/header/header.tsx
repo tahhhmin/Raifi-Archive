@@ -27,7 +27,7 @@ export default function Header() {
         {path: "/", label: "Home", icon: Home},
         {path: "/calendar", label: "Calendar", icon: CalendarDays},
         {path: "/movie-list", label: "Movie List", icon: Clapperboard},
-        {path: "/music-playlists", label: "Music Playlists", icon: Music},
+        {path: "/playlists", label: "Playlists", icon: Music},
         {path: "/mailbox", label: "Mailbox", icon: Mailbox},
         {path: "/bucketlist", label: "Bucketlist", icon: ListChecks},
         {path: "/date-ideas", label: "Date Ideas", icon: Heart},
@@ -35,7 +35,7 @@ export default function Header() {
         {path: "/chat", label: "Chat", icon: MessageCircleHeart,},
         {path: "/games", label: "Games", icon: Gamepad2},
         {path: "/garden", label: "Garden", icon: Flower},
-        {path: "/spin-the-wheel", label: "Spin The Wheel", icon: LoaderPinwheel},
+        {path: "/pick", label: "Pick", icon: LoaderPinwheel},
         {path: "/profile", label: "Profile", icon: BookUser},
     ];
 

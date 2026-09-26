@@ -18,18 +18,25 @@ export default async function ProfilePage() {
     return (
         <main>
             <div className={styles.container}>
-                {avatar ? (
-                    <img
-                    src={avatar}
-                    alt={`${name}'s profile picture`}
-                    />
-                ) : (
-                    <div className="profile-avatar-placeholder">
-                    {name.charAt(0).toUpperCase()}
+                <div className={styles.identityContainer}>
+                    <div className={styles.avatarContainer}>
+                        {avatar ? (
+                            <img
+                            className={styles.avatar}
+                            src={avatar}
+                            alt={`${name}'s profile picture`}
+                            />
+                        ) : (
+                            <div className="profile-avatar-placeholder">
+                            {name.charAt(0).toUpperCase()}
+                            </div>
+                        )}
                     </div>
-                )}
-                <h1>{name}</h1>
-                <p>{email}</p> 
+                    <div className={styles.nameContainer}>
+                        <h1>{name}</h1>
+                        <p>{email}</p> 
+                    </div>
+                </div>
 
                 <LogoutButton/>
             </div>

@@ -1,4 +1,23 @@
 .container {
-    padding: 0.75rem 1.5rem;
-    
+    background-color: var(--foreground);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+}
+.identityContainer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border);
+}
+.avatarContainer {
+    width: fit-content;
+}
+.avatar {
+    width: 100px;
+    height: auto;
+}
+.nameContainer {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
 }

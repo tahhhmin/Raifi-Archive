@@ -34,7 +34,6 @@ body {
 }
 main {
     justify-content: center;
-    text-align: center;
     display: flex;
     flex-direction: column;
     max-width: 1440px;
